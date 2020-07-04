@@ -10,11 +10,42 @@
         margin-left: 200px;
       }
     }
+    #root {
+      max-width: 1200px;
+      width: auto;
+      background-color: red;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+    .item {
+      width: 300px;
+      height: auto;
+      padding: 10px;
+      background-color: blue;
+      color: white;
+    }
   </style>
   <body>
     <h1>Test</h1>
     <div id="app">
-      <a>Ja?</a><span>Lol bre?Lol bre?Lol bre?Lol bre?</span><b>A ja?</b>
+      <a>Ja?</a><span class="lol">Lol bre?Lol bre?Lol bre?Lol bre?</span
+      ><b>A ja?</b>
+    </div>
+    <div id="root">
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+        nesciunt dolor explicabo earum, animi quas, fuga repellat neque atque
+        dignissimos, suscipit officiis dicta ratione alias cum quaerat enim
+        aliquid temporibus!
+      </div>
+      <div class="item item-2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente
+        nostrum possimus inventore assumenda minima id nisi debitis
+        reprehenderit laboriosam repudiandae voluptatum facere explicabo rerum
+        beatae aspernatur sunt obcaecati, adipisci ipsam.
+      </div>
     </div>
     <script src="/main.bundle.js"></script>
   </body>
