@@ -1,4 +1,5 @@
 import { checkOverflow as outCheckOverFlow } from "./helpers/overflow";
+import { checkFont as outCheckFont } from "./helpers/font";
 
 export class UiCheckker {
   el: object;
@@ -10,22 +11,26 @@ export class UiCheckker {
     let elementName: any = this.el;
     let domEl: string;
 
-    const { el, overFlowCheck } = elementName;
-
+    const { el, overFlowCheck, fontCheck } = elementName;
     if (el) {
       domEl = el;
-    }
-    if (overFlowCheck) {
-      this.checkOverflow(domEl, null, null);
-    }
+      window.addEventListener("resize", () => {
+        let width = document.body.clientWidth;
+        let height = document.body.clientHeight;
 
-    window.addEventListener("resize", () => {
-      let width = document.body.clientWidth;
-      let height = document.body.clientHeight;
-      this.checkOverflow(domEl, width, height);
-    });
+        if (overFlowCheck) {
+          this.checkOverflow(domEl, width, width);
+        }
+        if (fontCheck) {
+          this.checkFont(domEl, fontCheck, width);
+        }
+      });
+    }
   };
   checkOverflow = (el: string, w: number, h: number) => {
     outCheckOverFlow(el, w, h);
+  };
+  checkFont = (el: string, arr: Array<any>, w: number) => {
+    outCheckFont(el, arr, w);
   };
 }
