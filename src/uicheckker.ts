@@ -11,18 +11,14 @@ export class UiCheckker {
     let elementName: any = this.el;
     let domEl: string;
 
-    const { el, overFlowCheck, fontCheck } = elementName;
+    const { el, overFlowCheck } = elementName;
     if (el) {
       domEl = el;
       window.addEventListener("resize", () => {
         let width = document.body.clientWidth;
         let height = document.body.clientHeight;
-
         if (overFlowCheck) {
-          this.checkOverflow(domEl, width, width);
-        }
-        if (fontCheck) {
-          this.checkFont(domEl, fontCheck, width);
+          this.checkOverflow(domEl, width, height);
         }
       });
     }

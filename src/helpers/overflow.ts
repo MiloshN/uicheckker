@@ -1,3 +1,5 @@
+import { displayMessage } from "./display";
+
 export const checkOverflow = (el: string, w: number, h: number) => {
   let domEl: any;
   let overflowRes: boolean;
@@ -17,9 +19,13 @@ export const checkOverflow = (el: string, w: number, h: number) => {
     for (const item of domEl.children) {
       if (item !== null) {
         if (item.offsetLeft > domEl.offsetLeft) {
-          errArr.push(
-            `Element koji se prati id: ${el} je probio na rezoluciji w: ${w}, h: ${h}, dok element koji je izleteo je: ${item.nodeName}`
-          );
+          const info = {
+            followItem: el,
+            width: w,
+            height: h,
+          };
+          errArr.push(item);
+          displayMessage(errArr, info);
         }
       }
     }
