@@ -9,16 +9,14 @@ export class UiCheckker {
   }
   init = () => {
     let elementName: any = this.el;
-    let domEl: string;
-
+    
     const { el, overFlowCheck } = elementName;
     if (el) {
-      domEl = el;
       window.addEventListener("resize", () => {
         let width = document.body.clientWidth;
         let height = document.body.clientHeight;
         if (overFlowCheck) {
-          this.checkOverflow(domEl, width, height);
+          this.checkOverflow(el, width, height);
         }
       });
     }
