@@ -14,4 +14,15 @@ let init = new UiCheckker({
       },
     ],
   },
+  paddingCheck: {
+    psettings: [
+      {
+        brakePoint: 500,
+        settings: {
+          padding: [10, 20, 30, 40], // px, % i auto support
+          units: "px", // support single unit, later more of one
+        },
+      },
+    ],
+  },
 });
