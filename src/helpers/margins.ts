@@ -16,7 +16,7 @@ export const checkMargins = (el: string, arr: Array<any>, w: number) => {
           let value = parseInt(vall);
           if (value !== num) {
             console.log(
-              `Ocekujete da vrednost margine - ${side.toUpperCase()} bude ${num}px a ona je na rezoluciji od ${brakePoint}px sirine zapravo ${value}px `
+              `Za element sa ID: ${el}: Ocekujete da vrednost margine - ${side.toUpperCase()} bude ${num}px a ona je na rezoluciji od ${brakePoint}px sirine zapravo ${value}px `
             );
           }
         } else {
