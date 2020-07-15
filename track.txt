@@ -1,0 +1,19 @@
+// TASKS ❌
+
+// Validation steps
+// What if is global class empty? Without ``el`` data? ❌
+// What if is ``el`` data non string and non id? ❌
+// What if is ``overlowCheck`` non boolean value? ❌
+// What if is ``marginCheck`` non object value ? ❌
+// What if is ``marginCheck`` brakePoint negative value? ❌
+// What if is ``marginCheck`` settings non object? ❌
+// What if is ``marginCheck`` margin value in non array? ❌
+
+
+// Prepare ``marginCheck`` units non px values. E.g "%" or "em" and "rem" ?
+// Better way to display erros on page. (any lib)
+// Prepare way to choose only one margin part to check. E.g "marginTop:num".
+// Better way to display erros from overDlow checker.
+
+
+// DONE 💚
