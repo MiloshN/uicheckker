@@ -17,22 +17,31 @@ export class UiCheckker {
       overFlowCheck,
       marginCheck,
       marginCheck: { settings },
-      // paddingCheck,
-      // paddingCheck: { psettings },
     } = elementName;
+
     if (el) {
       window.addEventListener("resize", () => {
         let width = document.body.clientWidth;
         let height = document.body.clientHeight;
         if (overFlowCheck) {
+          // if (typeof overFlowCheck !== "boolean") {
+          //   console.error(
+          //     "ERROR: ``overflowCheck`` must be boolean value, true or false!"
+          //   );
+          //   console.warn("Please visit example: *");
+          // }
           this.checkOverflow(el, width, height);
         }
+
         if (marginCheck) {
+          // if (typeof marginCheck !== "object") {
+          //   console.error(
+          //     "ERROR: ``marginCheck`` must be object value with settings"
+          //   );
+          //   console.warn("Please visit example: *");
+          // }
           this.checkMargins(el, settings, width);
         }
-        // if (paddingCheck) {
-        //   this.checkPaddings(el, psettings, width);
-        // }
       });
     }
   };
