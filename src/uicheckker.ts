@@ -1,5 +1,6 @@
 import { checkOverflow as outCheckOverFlow } from "./helpers/overflow";
 import { checkFont as outCheckFont } from "./helpers/font";
+import { checkMargins as outCheckMargins } from "./helpers/margins";
 
 export class UiCheckker {
   el: object;
@@ -9,14 +10,22 @@ export class UiCheckker {
   }
   init = () => {
     let elementName: any = this.el;
-    
-    const { el, overFlowCheck } = elementName;
+
+    const {
+      el,
+      overFlowCheck,
+      marginCheck,
+      marginCheck: { settings },
+    } = elementName;
     if (el) {
       window.addEventListener("resize", () => {
         let width = document.body.clientWidth;
         let height = document.body.clientHeight;
         if (overFlowCheck) {
           this.checkOverflow(el, width, height);
+        }
+        if (marginCheck) {
+          this.checkMargins(el, settings, width);
         }
       });
     }
@@ -26,5 +35,8 @@ export class UiCheckker {
   };
   checkFont = (el: string, arr: Array<any>, w: number) => {
     outCheckFont(el, arr, w);
+  };
+  checkMargins = (el: string, settings: Array<any>, w: number) => {
+    outCheckMargins(el, settings, w);
   };
 }
