@@ -6,7 +6,7 @@ Uicheckker in addition to your website who will help you to check your website r
 **Note:** uicheckker is not stable yet, but you can follow progress.
 
 ## How is everything conceived?
-Include little JS file in your website where you will have abilites to check ``overflow`` & ``margins`` & ``paddings`` of your website on defined resolution.
+Include little JS file in your website where you will have abilities to check ``overflow`` & ``margins`` & ``paddings`` of your website on defined resolution.
 
 *Note: For now overflow, margins and padding, later we will add more addition like font check. etc.*
 
