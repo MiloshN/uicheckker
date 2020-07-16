@@ -1,7 +1,7 @@
 # uicheckker 
-Check responsive of your website on very easy way.
+Check the responsiveness of your website in a very easy way.  
 
-uicheckker is addition for your website who will help you to check your website responsiveness on easy way, just declare test, as result you will got response from uichekker.
+Uicheckker in addition to your website who will help you to check your website responsiveness in an easy way, just declare test, as a result you will get a response from uichekker. 
 
 **Note:** uicheckker is not stable yet, but you can follow progress.
 
