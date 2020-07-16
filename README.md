@@ -17,9 +17,13 @@ You have any id on your website who need be tracked by uicheckker, to check is a
 Here is little bit of code:
 
 `import  {  UiCheckker  }  from  "./uicheckker"; // ES6+`
+
 `new UiCheckker({`
+
 `	el: "app", // id attribude of element to be checked.`
+
 `	overFlowCheck: true, // run overflow check, later margin and padding example.`
+
 `});`
 
 Your next step is only to just resize your screen resolution with your mouse click. 
