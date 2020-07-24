@@ -1,5 +1,3 @@
-import { displayMessage } from "./display";
-
 export const checkOverflow = (el: string, w: number, h: number) => {
   let domEl: any;
   let overflowRes: boolean;
@@ -25,7 +23,6 @@ export const checkOverflow = (el: string, w: number, h: number) => {
             height: h,
           };
           errArr.push(item);
-          displayMessage(errArr, info);
         }
       }
     }
