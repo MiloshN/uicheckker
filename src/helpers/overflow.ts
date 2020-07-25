@@ -23,6 +23,7 @@ export const checkOverflow = (el: string, w: number, h: number) => {
             height: h,
           };
           errArr.push(item);
+          console.log(info, item);
         }
       }
     }
